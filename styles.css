@@ -55,7 +55,7 @@
 /* ----------------------------- */
 
 /* ........................... */
-/* 1 - Text color              */
+/* 1 - Text colors             */
 
 .text-primary-400 {
     color: hsl(var(--clr-primary-400));
@@ -78,7 +78,30 @@
 }
 
 /* ........................... */
-/* 2 - Font weights            */
+/* 2 - Background colors       */
+
+.bg-primary-400 {
+    background-color: hsl(var(--clr-primary-400));
+}
+
+.bg-accent-400 {
+    background-color: hsl(var(--clr-accent-400));
+}
+
+.bg-accent-100 {
+    background-color: hsl(var(--clr-accent-100));
+}
+
+.bg-neutral-100 {
+    background-color: hsl(var(--clr-neutral-100));
+}
+
+.bg-neutral-900 {
+    background-color: hsl(var(--clr-neutral-900));
+}
+
+/* ........................... */
+/* 3 - Font weights            */
 
 .fw-regular { font-weight: var(--fw-regular); }
 
@@ -87,7 +110,7 @@
 .fw-bold { font-weight: var(--fw-bold); }
 
 /* ........................... */
-/* 3 - Font sizes              */
+/* 4 - Font sizes              */
 
 .fs-primary-heading {
     font-size: var(--fs-primary-heading);
@@ -95,4 +118,21 @@
 
 .fs-secondary-heading {
     font-size: var(--fs-secondary-heading);
+}
+
+.fs-300 { font-size: var(--fs-300); } 
+.fs-400 { font-size: var(--fs-400); } 
+.fs-500 { font-size: var(--fs-500); } 
+.fs-600 { font-size: var(--fs-600); } 
+
+/* ----------------------------- */
+/* Styling                       */
+/* ----------------------------- */
+
+body {
+    font-family: var(--ff-body);
+}
+
+.container {
+    display: flex;
 }

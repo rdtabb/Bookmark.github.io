@@ -212,7 +212,7 @@ main {
     background-color: hsl(var(--clr-accent-400));
     color: hsl(var(--clr-neutral-100));
     padding: 1em 2.5em;
-    box-shadow: 0 5px 70px hsl(var(--clr-accent-400));
+    box-shadow: 0 1em 1em -1em hsl(var(--clr-accent-400));
     font-weight: var(--fw-bold);
     font-size: var(--fs-button);
     transition: all 200ms ease-in;
@@ -229,6 +229,56 @@ main {
     color: hsl(var(--clr-accent-400));
 }
 
+.button[data-type]:hover {
+    color: hsl(var(--clr-accent-400), .8);
+}
+ 
+.button--no-shadow {
+    box-shadow: none;
+}
+
+/* ........................... */
+/* 3 - animated hamburger      */
+
+.mobile-nav-toggle {
+    --button-color: #333;
+    background: transparent;
+    border: none;
+}
+
+.mobile-nav-toggle .line {
+    transition: 
+        y 300ms ease-in 300ms, 
+        rotate 300ms ease-in,
+        opacity 0ms ease-in 300ms
+    ;
+    transform-origin: center;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .line {
+    transition: 
+        y 300ms ease-in, 
+        rotate 300ms ease-in 300ms,
+        opacity 0ms ease-in 300ms
+    ;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] :is(.top, .bottom) {
+    y: 45;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .top {
+    rotate: 45deg;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .bottom {
+    rotate: -45deg;
+}
+
 /* ........................... */
 /* 4 - navigation              */
 
@@ -236,11 +286,37 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding-top: clamp(2rem, 10vh + 1rem, 3rem);
+}
+
+.container_navigation > *:last-child {
+    display: none;
+}
+
+.primary-navigation {
+    position: absolute;
+    top: calc(var(--size-900) * 1.25);
+    width: min(90%, 90vw);
+    transform: translateX(7%);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    background-color: hsl(var(--clr-neutral-100));
+    border: 1px solid hsl(var(--clr-neutral-900), .1);
+    padding-block: var(--size-600);
+    opacity: 0;
+    transition: all 300ms ease-in;
+
+}
+
+.opacity {
+    opacity: 1;
 }
 
 .nav__list {
     display: flex;
+    flex-direction: column;
     gap: var(--size-600);
 }
 
@@ -252,6 +328,10 @@ main {
 
 .nav__list a:hover {
     color: hsl(var(--clr-primary-400), 0.8);
+}
+
+@media (min-width: 40em) {
+
 }
 
 /* ........................... */

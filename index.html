@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Manage landing page</title>
+  <title>Manage E-Commerce</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
@@ -42,7 +42,7 @@
     <section class="padding-block-90">
       <div class="container">
         <div class="even-columns">
-          <div class="first-section__column-one">
+          <div class="first-section__column-one | flow">
             <h1 class="fs-primary-heading fw-bold">
               Bring everyone together to build better products.
             </h1>
@@ -62,7 +62,7 @@
     <section class="padding-block-90">
       <div class="container">
         <div class="even-columns">
-          <div class="second-section__column-one">
+          <div class="second-section__column-one | flow">
             <h2 class="fs-secondary-heading fw-bold">
               What’s different about Manage?</h2>
             <p>
@@ -72,8 +72,8 @@
             </p>
           </div>
           <div class="second-section__column-two">
-            <ul role="list">
-              <li>
+            <ul role="list" class="flow">
+              <li class="flow flow_place_li">
                 <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
                 <p>
                   See how your day-to-day tasks fit into the wider vision. Go from
@@ -81,7 +81,7 @@
                   smallest of details. Never lose sight of the bigger picture again.
                 </p>
               </li>
-              <li>
+              <li class="flow flow_place_li">
                 <h3 class="fs-600 fw-bold">Advanced built-in reports</h3>
                 <p>
                   Set internal delivery estimates and track progress toward company
@@ -89,7 +89,7 @@
                   you need to keep key stakeholders informed.
                 </p>
               </li>
-              <li>
+              <li class="flow flow_place_li">
                 <h3 class="fs-600 fw-bold">Everything you need in one place</h3>
                 <p>
                   Stop jumping from one service to another to communicate, store files,
@@ -131,15 +131,27 @@
 
   <footer class="padding-block-700 bg-neutral-900 text-neutral-100">
     <div class="container">
-      <div class="even-columns">
+      <div class="even-columns even-columns--footer">
         <div>
-          <a href="#"><img src="./images/logo.svg" alt="Logo of manage"></a>
+          <a href="#">
+            <img class="footer__logo" src="./images/logo.svg" alt="Logo of manage">
+          </a>
           <ul role="list" aria-label="Social links">
-            <li><a aria-label="facebook" href="#"></a></li>
-            <li><a aria-label="youtube" href="#"></a></li>
-            <li><a aria-label="twitter" href="#"></a></li>
-            <li><a aria-label="pinterest" href="#"></a></li>
-            <li><a aria-label="instagram" href="#"></a></li>
+            <li><a aria-label="facebook" href="#">
+              <img src="./images/icon-facebook.svg" alt="" class="social-icons">
+            </a></li>
+            <li><a aria-label="youtube" href="#">
+              <img src="./images/icon-youtube.svg" alt="" class="social-icons">
+            </a></li>
+            <li><a aria-label="twitter" href="#">
+              <img src="./images/icon-twitter.svg" alt="" class="social-icons">
+            </a></li>
+            <li><a aria-label="pinterest" href="#">
+              <img src="./images/icon-pinterest.svg" alt="" class="social-icons">
+            </a></li>
+            <li><a aria-label="instagram" href="#">
+              <img src="./images/icon-instagram.svg" alt="" class="social-icons">
+            </a></li>
           </ul>
         </div>
         <div>
@@ -156,11 +168,11 @@
           </nav>
         </div>
         <div>
-          <form action="">
-            <imput type="email"></imput>
+          <form class="grid-children" action="">
+            <input type="email" placeholder="Your Email"></input>
             <button class="button button--no-shadow">Go</button>
           </form>
-          <p>Copyright 2020. All Rights Reserved</p>
+          <p class="grid-children">Copyright 2020. All Rights Reserved</p>
         </div>
       </div>
     </div>

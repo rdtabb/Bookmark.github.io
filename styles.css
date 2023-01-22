@@ -435,43 +435,44 @@ header img {
 /* ........................... */
 /* x - footer                  */
 
-.even-columns--footer {
-    grid-template-columns: .5fr 1fr .7fr;
+.footer__social-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.footer-nav > ul {
+.footer__social-list {
+    display: flex;
+    gap: var(--size-400);
+}
+
+.footer__nav-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: var(--size-400);
+    gap: var(--size-400);
+    list-style: none;
 }
 
-.footer-nav a {
+.footer__nav-list a{
     text-decoration: none;
     color: hsl(var(--clr-neutral-100));
 }
 
-footer div:has(form) {
-    display: grid;
-    gap: var(--size-800);
-}
-
-footer input{
-    padding: .75rem;
-    border: none;
-    border-radius: 100vmax;
-}
-
-.even-columns--footer > div:has(ul[aria-label]) {
+.footer__form-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
-}
-
-ul[aria-label] {
-    display: flex;
-    gap: 1rem;
-}
-
-.grid-children {
     justify-self: end;
+}
+
+.footer__form input {
+    padding: var(--size-300);
+    border-radius: 100vmax;
+    border: none;
+}
+
+@media (max-width: 45em) {
+
 }

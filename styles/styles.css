@@ -448,20 +448,56 @@ header img {
 /* ........................... */
 /* 8 - carousel                */
 
+.carousel {
+    display: grid;
+    row-gap: var(--size-400);
+}
+
+.carousel > :is(:first-child, :last-child) {
+    place-self: center;
+}
+
+.button--carousel {
+    max-width: fit-content;
+}
+
+.slider__image {
+    aspect-ratio: 1;
+    max-width: var(--size-800);
+    margin-inline: auto;
+    transform: translateY(-20%);
+}
+
+.slide__wrapper {
+    background-color: rgb(235, 235, 235, .3);
+    text-align: center;
+    padding: var(--size-400);
+    width: max(100vw, 10rem);
+    border-radius: var(--size-400);
+}
+
+@media (min-width: 30em) {
+    .slide__wrapper {
+        width: 30rem;
+    }
+}
+
+.slide__wrapper p {
+    padding-block: var(--size-400);
+}
+
 .embla {
     overflow: hidden;
 }
 
 .embla__container {
     display: flex;
+    gap: var(--size-400);
     will-change: transform;
 }
 
 .embla__slide {
     position: relative;
-    flex: 0 0 auto;
-    width: 30%;
-    border: 1px solid red;
 }
 /* ........................... */
 /* 8 - last section            */

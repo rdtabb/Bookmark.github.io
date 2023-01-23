@@ -464,8 +464,7 @@ header img {
 .slider__image {
     aspect-ratio: 1;
     max-width: var(--size-800);
-    margin-inline: auto;
-    transform: translateY(-20%);
+    margin: 0 auto 1rem;
 }
 
 .slide__wrapper {

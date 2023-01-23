@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="./script.js"></script>
-  <script defer src="./observers.js"></script>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script defer src="./scripts/script.js"></script>
+  <script defer src="./scripts/observers.js"></script>
 </head>
 
 <body>
@@ -64,13 +64,13 @@
       <div class="container">
         <div class="even-columns">
           <div class="second-section__column-one | flow">
-            <h2 class="disappear fs-secondary-heading fw-bold">
-              What’s different about Manage?</h2>
-            <p class="disappear">
-              Manage provides all the functionality your team needs, without
-              the complexity. Our software is tailor-made for modern digital
-              product teams.
-            </p>
+              <h2 class="disappear fs-secondary-heading fw-bold">
+                What’s different about Manage?</h2>
+              <p class="disappear">
+                Manage provides all the functionality your team needs, without
+                the complexity. Our software is tailor-made for modern digital
+                product teams.
+              </p>
           </div>
           <div class="second-section__column-two">
             <ul role="list" class="numbered-items | flow">
@@ -108,7 +108,22 @@
       <h2 class="fs-secondary-heading fw-bold">
         What they’ve said
       </h2>
-      <!-- carousel would be added there -->
+      <div class="embla" id="embla">
+        <div class="embla__container">
+          <div class="embla__slide">
+            Slide 1
+          </div>
+          <div class="embla__slide">
+            Slide 2
+          </div>
+          <div class="embla__slide">
+            Slide 3
+          </div>
+          <div class="embla__slide">
+            Slide 4
+          </div>
+        </div>
+      </div>
       <button class="button">Get Started</button>
     </section>
 
@@ -179,23 +194,11 @@
     </div>
 
   </footer>
-  <!-- Anisha Li
-  “Manage has supercharged our team’s workflow. The ability to maintain 
-  visibility on larger milestones at all times keeps everyone motivated.”
 
-  Ali Bravo
-  “We have been able to cancel so many other subscriptions since using 
-  Manage. There is no more cross-channel confusion and everyone is much 
-  more focused.”
-
-  Richard Watts
-  “Manage allows us to provide structure and process. It keeps us organized 
-  and focused. I can’t stop recommending them to everyone I talk to!”
-
-  Shanai Gough
-  “Their software allows us to track, manage and collaborate on our projects 
-  from anywhere. It keeps the whole team in-sync without being intrusive.” -->
-
+  <script src="https://unpkg.com/embla-carousel"></script>
+  <script>
+    const embla = EmblaCarousel(document.getElementById('embla'))
+  </script>
 </body>
 
 </html> 

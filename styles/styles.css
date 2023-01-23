@@ -406,7 +406,7 @@ header img {
     max-width: 42ch;
 }
 
-.numbered-items {
+/* .numbered-items {
     counter-reset: count;
 }
 
@@ -414,12 +414,14 @@ header img {
     counter-increment: count;
 }
 
-/* .numbered-items li::before {
-    content: counter(count);
+.numbered-items h3::before {
+    content: "0" counter(count);
     background-color: hsl(var(--clr-accent-400));
     color: hsl(var(--clr-neutral-100));
-    padding: var(--size-300) var(--size-500);
+    padding: var(--size-200) var(--size-500);
     border-radius: 100vmax;
+    font-weight: bold;
+    margin-right: .1rem;
 } */
 
 @media (max-width: 40em) {
@@ -443,17 +445,26 @@ header img {
     }
 }
 
-
-
-
-
-
-
-
-
-
 /* ........................... */
-/* x - last section            */
+/* 8 - carousel                */
+
+.embla {
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+    will-change: transform;
+}
+
+.embla__slide {
+    position: relative;
+    flex: 0 0 auto;
+    width: 30%;
+    border: 1px solid red;
+}
+/* ........................... */
+/* 8 - last section            */
 
 .cta div:has(.button) {
    place-self: end;
@@ -467,7 +478,7 @@ header img {
 }
 
 /* ........................... */
-/* x - footer                  */
+/* 9 - footer                  */
 
 .footer__social-container {
     display: flex;
@@ -566,7 +577,6 @@ header img {
     .footer__logo {
         order: 1;
         margin-inline: auto;
-        color: white;
     }
 
     .footer__social-list {
@@ -585,7 +595,7 @@ header img {
 }
 
 /* ........................... */
-/* x - classes for i.observers */
+/* i - classes for i.observers */
 
 .disappear {
     opacity: 0;

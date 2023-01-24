@@ -2,7 +2,7 @@ const faders = document.querySelectorAll('.disappear')
 
 const fadersOptions = { 
     threshold: 0,
-    rootMargin: "0px 0px -150px 0px"
+    rootMargin: "0px 0px -100px 0px"
 }
 
 const appearOnScroll = new IntersectionObserver(function (

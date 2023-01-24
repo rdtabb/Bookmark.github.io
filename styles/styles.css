@@ -303,9 +303,9 @@ main {
 
 .primary-header__illustration {
     position: absolute;
-    right: 0;
+    right: -10rem;
     top: 0;
-    scale: 2;
+    scale: 1;
 }
 
 .container_navigation {
@@ -369,7 +369,7 @@ main {
         transform: none;
         display: flex;
         color: hsl(var(--clr-neutral-900));
-        background-color: none;
+        background-color: transparent;
         border: none;
         opacity: 1;
         z-index: 1000;
@@ -381,6 +381,13 @@ main {
 
     .container_navigation > *:last-child {
         display: inline-block;
+    }
+
+    .primary-header__illustration {
+        position: absolute;
+        right: 0;
+        top: 0;
+        scale: 2;
     }
 }
 
@@ -409,6 +416,20 @@ header img {
 @media (max-width: 40em) {
     .first-section__column-one > * {
         margin-inline: auto;
+    }
+
+    .first-section__illustration {
+        position: absolute;
+        left: 15rem;
+        top: 7rem;
+    }
+
+    .even-columns > .first-section__column-one {
+        order: 1;
+    }
+    
+    .even-columns > .first-section__column-two {
+        order: -1;
     }
 }
 
@@ -449,7 +470,7 @@ header img {
 
 .carousel {
     display: grid;
-    row-gap: var(--size-400);
+    row-gap: var(--size-800);
 }
 
 .carousel > :is(:first-child, :last-child) {
@@ -519,6 +540,13 @@ header img {
 @media (max-width: 45em) {
     .cta div:has(.button) {
         place-self: center;
+    }
+
+    .cta__illustration {
+        inset: auto;
+        height: 70%;
+        width: 100%;
+        object-fit: cover;
     }
 }
 

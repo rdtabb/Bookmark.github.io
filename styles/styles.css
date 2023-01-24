@@ -170,10 +170,6 @@
 
 @media (min-width: 40em) {
     .even-columns {
-        /* you can make columns this way   */
-        /* grid-template-columns: 1fr 1fr; */
-        
-        /* or this way, choose whatever    */
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
         text-align: left;
@@ -301,6 +297,17 @@ main {
 /* ........................... */
 /* 4 - header                  */
 
+.primary-header {
+    position: relative;
+}
+
+.primary-header__illustration {
+    position: absolute;
+    right: 0;
+    top: 0;
+    scale: 2;
+}
+
 .container_navigation {
     display: flex;
     justify-content: space-between;
@@ -385,6 +392,16 @@ header img {
 /* ........................... */
 /* 6 - first section           */
 
+.first-section {
+    position: relative;
+}
+
+.first-section__illustration {
+    position: absolute;
+    left: -30rem;
+    transform: translateY(70%);
+}
+
 .first-section__column-one > p {
     max-width: 33ch;
 }
@@ -405,24 +422,6 @@ header img {
 .second-section__column-two p {
     max-width: 42ch;
 }
-
-/* .numbered-items {
-    counter-reset: count;
-}
-
-.numbered-items li {
-    counter-increment: count;
-}
-
-.numbered-items h3::before {
-    content: "0" counter(count);
-    background-color: hsl(var(--clr-accent-400));
-    color: hsl(var(--clr-neutral-100));
-    padding: var(--size-200) var(--size-500);
-    border-radius: 100vmax;
-    font-weight: bold;
-    margin-right: .1rem;
-} */
 
 @media (max-width: 40em) {
     .second-section__column-one > * {
@@ -499,7 +498,18 @@ header img {
     position: relative;
 }
 /* ........................... */
-/* 8 - last section            */
+/* 8 - cta                     */
+
+.cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta__illustration {
+    position: absolute;
+    top: 0;
+    scale: 1.5;
+}
 
 .cta div:has(.button) {
    place-self: end;

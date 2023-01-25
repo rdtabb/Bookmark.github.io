@@ -610,6 +610,15 @@ header img {
     border: none;
 }
 
+.footer__logo {
+    opacity: 1;
+    transition: opacity 200ms ease;
+}
+
+.footer__logo:hover {
+    opacity: .7;
+}
+
 @media (max-width: 45em) {
     .even-columns--footer {
         grid-template-areas: 
